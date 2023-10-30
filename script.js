@@ -5,20 +5,22 @@ function mensajeDeBienvenida() {
     alert("¡Bienvenido, " + nombre + "!");
   }
 }
+alert(mensajeDeBienvenida())
 
 // 2. Mayor de edad
 function esMayorDeEdad() {
-  let edad = parseInt(prompt("2. Ingresa tu edad:"));
+  let edad = Number(prompt("2. Ingresa tu edad:"));
   if (edad >= 18) {
     alert("Eres mayor de edad.");
   } else {
     alert("Eres menor de edad.");
   }
 }
+alert(esMayorDeEdad())
 
 // 3. Categoría de edad
 function categoriaDeEdad() {
-  let edad = parseInt(prompt("3. Ingresa tu edad:"));
+  let edad = Number(prompt("3. Ingresa tu edad:"));
   if (edad >= 6 && edad <= 11) {
     alert("Eres un niño.");
   } else if (edad >= 12 && edad <= 18) {
@@ -31,6 +33,7 @@ function categoriaDeEdad() {
     alert("Eres un anciano.");
   }
 }
+alert(categoriaDeEdad())
 
 // 4. Día laborable o fin de semana
 function diaLaborableOFinDeSemana() {
@@ -44,6 +47,7 @@ function diaLaborableOFinDeSemana() {
     alert("Día no válido.");
   }
 }
+alert(diaLaborableOFinDeSemana())
 
 // 5. Comprobar contraseña
 function comprobarContraseña() {
@@ -54,11 +58,13 @@ function comprobarContraseña() {
     alert("Acceso denegado.");
   }
 }
+alert(comprobarContraseña())
 
 // 6. Múltiplo de 5
 function esMultiploDe5(numero) {
   return numero % 5 === 0;
 }
+alert(esMultiploDe5())
 
 // 7. Cálculo de descuento
 function calcularDescuento(edad, precio) {
@@ -68,6 +74,7 @@ function calcularDescuento(edad, precio) {
     return precio;
   }
 }
+alert(calcularDescuento())
 
 // 8. Categoría de notas
 function categoriaDeNotas(calificacion) {
@@ -79,6 +86,7 @@ function categoriaDeNotas(calificacion) {
     return "EP (Evaluación Pendiente)";
   }
 }
+alert(categoriaDeNotas())
 
 // 9. Día de la semana
 function diaDeLaSemana(numero) {
@@ -89,11 +97,14 @@ function diaDeLaSemana(numero) {
     return "Día no válido.";
   }
 }
+alert(diaDeLaSemana())
 
 // 10. Año bisiesto
-function esAnoBisiesto(ano) {
-  return (ano % 400 === 0) || (ano % 4 === 0 && ano % 100 !== 0);
+function esAñoBisiesto(año) {
+  año = Number(prompt("Que año es?"))
+  return (año % 400 === 0) || (año % 4 === 0 && año % 100 !== 0);
 }
+alert(esAñoBisiesto())
 
 // 11. Comprobar igualdad de cadenas
 function sonCadenasIguales(cadena1, cadena2) {
@@ -103,10 +114,12 @@ function sonCadenasIguales(cadena1, cadena2) {
     return "Las cadenas son diferentes.";
   }
 }
+alert(sonCadenasIguales())
 
 // 12. Calculadora de edad
-function calcularEdad(anoNacimiento) {
+function calcularEdad(añoNacimiento) {
   const fechaActual = new Date();
-  const anoActual = fechaActual.getFullYear();
-  return anoActual - anoNacimiento;
+  const añoActual = fechaActual.getFullYear();
+  return añoActual - añoNacimiento;
 }
+alert(calcularEdad())
