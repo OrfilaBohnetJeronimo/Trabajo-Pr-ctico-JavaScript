@@ -3,6 +3,8 @@ function mensajeDeBienvenida() {
   let nombre = prompt("1. Ingresa tu nombre:");
   if (nombre === "Santino" || nombre === "Nahuel") {
     alert("¡Bienvenido, " + nombre + "!");
+  } else {
+    alert("¡Bienvenido, " + nombre + "!");
   }
 }
 alert(mensajeDeBienvenida())
@@ -39,9 +41,9 @@ alert(categoriaDeEdad())
 function diaLaborableOFinDeSemana() {
   let diaSemana = prompt("4. Ingresa un día de la semana:");
   diaSemana = diaSemana.toLowerCase();
-  if (diaSemana === "lunes" || diaSemana === "martes" || diaSemana === "miércoles" || diaSemana === "jueves" || diaSemana === "viernes") {
+  if (diaSemana === "lunes" || diaSemana === "martes" || diaSemana === "miércoles" || diaSemana === "jueves" || diaSemana === "viernes" || diaSemana === "sábado") {
     alert("Es un día laborable.");
-  } else if (diaSemana === "sábado" || diaSemana === "domingo") {
+  } else if (diaSemana === "domingo") {
     alert("Es un fin de semana.");
   } else {
     alert("Día no válido.");
@@ -62,12 +64,15 @@ alert(comprobarContraseña())
 
 // 6. Múltiplo de 5
 function esMultiploDe5(numero) {
+  numero = Number(prompt("¡Elije un numero!"))
   return numero % 5 === 0;
 }
 alert(esMultiploDe5())
 
 // 7. Cálculo de descuento
 function calcularDescuento(edad, precio) {
+  edad = Number(prompt("Cual es tu edad?"))
+  precio = Number(prompt("Cual es el precio de la compra"))
   if (edad > 65) {
     return precio * 0.9; // 10% de descuento
   } else {
@@ -78,6 +83,7 @@ alert(calcularDescuento())
 
 // 8. Categoría de notas
 function categoriaDeNotas(calificacion) {
+  calificacion = Number(prompt("¡Cual es tu calificacion (Un numero del 0 al 100)!"))
   if (calificacion >= 80) {
     return "MS (Muy Satisfactorio)";
   } else if (calificacion >= 60) {
@@ -90,6 +96,7 @@ alert(categoriaDeNotas())
 
 // 9. Día de la semana
 function diaDeLaSemana(numero) {
+  numero = Number(prompt("Elije un numero"))
   const dias = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"];
   if (numero >= 1 && numero <= 7) {
     return dias[numero - 1];
@@ -108,6 +115,8 @@ alert(esAñoBisiesto())
 
 // 11. Comprobar igualdad de cadenas
 function sonCadenasIguales(cadena1, cadena2) {
+  cadena1 = Number(prompt("Dime un numero"))
+  cadena2 = Number(prompt("Dime otro numero o el mismo"))
   if (cadena1 === cadena2) {
     return "Las cadenas son iguales.";
   } else {
